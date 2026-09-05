@@ -1,0 +1,51 @@
+/* Este archivo CSS se centra en los estilos de las boxes y contenedores */
+
+/* Contenedor en columna hacia abajo */
+.contenedor-columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 10px;
+}
+
+/* Estilo general de las boxes */
+.box {
+    background-color: black;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #888;
+}
+
+/* Estilo de las input boxes que se usan para escribir en ellas
+heredan el estilo de la clase box */
+.input-box{
+    width: clamp(12.5rem, 10.714rem + 8.929vw, 18.75rem);
+    height: clamp(1rem, 0.714rem + 1.429vw, 2rem);
+    text-align: center;
+    word-break: break-all;
+}
+
+/* box con imagen de item destacado en el home
+hereda estilo de la clase box*/
+.producto-destacado{
+    grid-column: span 3; /* importante el main tiene un grid de 5*/
+    height: clamp(25rem, 25rem + 0vw, 25rem);
+}
+
+/* Indica la informacion del producto destacado
+hereda estilo de la clase box*/
+.info-producto{
+    grid-column: span 2; /* importante el main tiene un grid de 5*/
+    height: clamp(25rem, 25rem + 0vw, 25rem);
+}
+
+/* box con imagen de producto que lleva a la pagina del producto
+hereda el estilo de la clase box*/
+.producto-1{
+    height: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
+}

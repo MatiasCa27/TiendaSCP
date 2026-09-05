@@ -1,7 +1,25 @@
+/* Ëstilos generales */
+
+/* Estilo general para los body */
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* color y tamaño de la fuente de los <p> */
 p{
     color: white;
     font-size: 24px;
 }
+
+/* Hace que los inputs sean de fondo transparentes y de texto en blanco
+ademas utilizan toda la box */
 input{
     color: white;
     background-color: transparent;
@@ -10,18 +28,60 @@ input{
     box-sizing: border-box;
     appearance: none;
 }
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  gap: 10px;
+
+/* Estilo general del header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid gray;
 }
-.box1{
-    border: 3px solid white;
-    width: clamp(12.5rem, 10.714rem + 8.929vw, 18.75rem);
-    height: clamp(1rem, 0.714rem + 1.429vw, 2rem);
+
+/* Estilo para la navegacion del header */
+.header-nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 75px;
+}
+
+/* Estilo para la navegacion del header */
+.header-nav a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+/* Estilo de main para la pagina home
+vamos a necesitar separarlo */
+main{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+footer{
     text-align: center;
-    word-break: break-all;
+    padding: 20px;
+    border-top: 1px solid gray;
+}
+
+.footer-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+.footer-nav a{
+    text-decoration: none;
+        color: gray; /* Texto sutil */
+        font-size: 20px;
 }
