@@ -29,6 +29,19 @@ input{
     appearance: none;
 }
 
+/* Hace que los botones sean de fondo transparente y texto blanco
+ademas utilizan toda la box */
+button{
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
 /* Estilo general del header */
 header{
     display: flex;

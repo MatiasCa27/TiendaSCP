@@ -30,6 +30,13 @@ heredan el estilo de la clase box */
     word-break: break-all;
 }
 
+.boton-box1{
+    width: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
+    height: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
+    text-align: center;
+    word-break: break-all;
+}
+
 /* box con imagen de item destacado en el home
 hereda estilo de la clase box*/
 .producto-destacado{
