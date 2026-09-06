@@ -30,6 +30,10 @@ heredan el estilo de la clase box */
     word-break: break-all;
 }
 
+.texto-box{
+    width: clamp(31.25rem, 31.25rem + 0vw, 31.25rem);
+}
+
 .boton-box1{
     width: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
     height: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
@@ -55,4 +59,5 @@ hereda estilo de la clase box*/
 hereda el estilo de la clase box*/
 .producto-1{
     height: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
+    width: clamp(14.063rem, 14.063rem + 0vw, 14.063rem);
 }
