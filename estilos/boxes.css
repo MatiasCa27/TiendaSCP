@@ -30,8 +30,19 @@ heredan el estilo de la clase box */
     word-break: break-all;
 }
 
-.texto-box{
-    width: clamp(31.25rem, 31.25rem + 0vw, 31.25rem);
+.texto-box {
+    width: 80%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: block;
+    border: 3px solid white;
+}
+
+.texto-box p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
 }
 
 .boton-box1{
@@ -60,4 +71,72 @@ hereda el estilo de la clase box*/
 .producto-1{
     height: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
     width: clamp(14.063rem, 14.063rem + 0vw, 14.063rem);
+}
+
+.destacado-contenido{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.destacado-contenido img{
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+.destacado-contenido div{
+    flex: 1;
+    text-align: left;
+}
+.destacado-contenido h1{
+    margin-bottom: 20px;
+}
+.destacado-contenido h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.destacado-contenido p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Formulario de Join Us */
+.texto-box h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.texto-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.texto-box label {
+    align-self: flex-start;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.solicitud-box {
+    width: clamp(12.5rem, 10.714rem + 8.929vw, 18.75rem);
+    height: 100px;
+}
+
+.solicitud-box textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
 }
