@@ -3,7 +3,7 @@ function obtenerAlias(){
     if(validarString(alias.value, 2, 20)){
         return alias;
     }else{
-        alert("alias no válido");
+        alert("El alias debe tener entre 2 y 20 caracteres");
         return null;
     }
 }
@@ -13,7 +13,7 @@ function obtenerEmail(){
     if(validarString(email.value, 5, 50)){
         return email;
     }else{
-        alert("email no válido");
+        alert("El email debe tener entre 5 y 50 caracteres");
         return null;
     }
 }
@@ -23,28 +23,28 @@ function obtenerContraseña(){
     if(validarString(contraseña.value, 8, 20)){
         return contraseña;
     }else{
-        alert("contraseña no válida");
+        alert("La contraseña debe tener entre 8 y 20 caracteres");
         return null;
     }
 }
 
 function validarFloat(value, min, max){
     let trimmedValue = value.trim();
-    if (trimmedValue === "" || isNaN(trimmedValue)) {
+    if(trimmedValue === "" || isNaN(trimmedValue)){
         return false;
     }
     let numero = parseFloat(trimmedValue);
-    if (min !== undefined && numero < min){
+    if(min !== undefined && numero < min){
         return false;
-    } 
-    if (max !== undefined && numero > max){
+    }
+    if(max !== undefined && numero > max){
         return false;
-    } 
+    }
     return true;
 }
 
 function validarString(text, min, max){
-    if (typeof text !== "string") {
+    if(typeof text !== "string"){
         return false;
     }
     let trimmedText = text.trim();
@@ -59,7 +59,83 @@ function obtenerInfo(){
     let alias = obtenerAlias();
     let email = obtenerEmail();
     let contraseña = obtenerContraseña();
-} 
+}
 
-//idk if this would work but lets pray to god that it does
-//we live in a cruel world that doesnt let us commit mistakes
+function iniciarSesion(){
+    let alias = obtenerAliasLogin();
+    if(alias == null){
+        return;
+    }
+
+    let password = obtenerPasswordLogin();
+    if(password == null){
+        return;
+    }
+    window.location.href = "./home.html";
+}
+
+function obtenerAliasLogin(){
+    let alias = document.getElementById("login-alias");
+    if(validarString(alias.value, 2, 20)){
+        return alias;
+    }else{
+        alert("El alias debe tener entre 2 y 20 caracteres");
+        return null;
+    }
+}
+
+function obtenerPasswordLogin(){
+    let password = document.getElementById("login-password");
+    if(validarString(password.value, 8, 20)){
+        return password;
+    }else{
+        alert("La contraseña debe tener entre 8 y 20 caracteres");
+        return null;
+    }
+}
+
+function registrarse(){
+    let alias = obtenerAliasRegister();
+    if(alias == null){
+        return;
+    }
+    let correo = obtenerCorreoRegister();
+    if(correo == null){
+        return;
+    }
+    let password = obtenerPasswordRegister();
+    if(password == null){
+        return;
+    }
+    window.location.href = "./home.html";
+}
+
+function obtenerAliasRegister(){
+    let alias = document.getElementById("register-alias");
+    if(validarString(alias.value, 2, 20)){
+        return alias;
+    }else{
+        alert("El alias debe tener entre 2 y 20 caracteres");
+        return null;
+    }
+}
+
+function obtenerCorreoRegister(){
+    let correo = document.getElementById("register-correo");
+    if(validarString(correo.value, 5, 50)){
+        return correo;
+    }else{
+        alert("El correo debe tener entre 5 y 50 caracteres");
+        return null;
+    }
+}
+
+function obtenerPasswordRegister(){
+    let password = document.getElementById("register-password");
+    if(validarString(password.value, 8, 20)){
+        return password;
+    }else{
+        alert("La contraseña debe tener entre 8 y 20 caracteres");
+        return null;
+    }
+}
