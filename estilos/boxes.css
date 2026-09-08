@@ -10,6 +10,16 @@
   gap: 10px;
 }
 
+/* Estilo de main para la pagina home*/
+main{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
 /* Estilo general de las boxes */
 .box {
     background-color: black;
@@ -55,8 +65,12 @@ heredan el estilo de la clase box */
 /* box con imagen de item destacado en el home
 hereda estilo de la clase box*/
 .producto-destacado{
-    grid-column: span 3; /* importante el main tiene un grid de 5*/
-    height: clamp(25rem, 25rem + 0vw, 25rem);
+    grid-column: span 4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: block;
+    border: 3px solid white;
 }
 
 /* Indica la informacion del producto destacado
@@ -69,38 +83,9 @@ hereda estilo de la clase box*/
 /* box con imagen de producto que lleva a la pagina del producto
 hereda el estilo de la clase box*/
 .producto-1{
+    grid-column: span 1;
     height: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
     width: clamp(14.063rem, 14.063rem + 0vw, 14.063rem);
-}
-
-.destacado-contenido{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.destacado-contenido img{
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
-}
-.destacado-contenido div{
-    flex: 1;
-    text-align: left;
-}
-.destacado-contenido h1{
-    margin-bottom: 20px;
-}
-.destacado-contenido h2{
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.destacado-contenido p{
-    font-size: 18px;
-    line-height: 1.5;
 }
 
 /* Formulario de Join Us */
@@ -141,56 +126,23 @@ hereda el estilo de la clase box*/
     font-size: 16px;
 }
 
-@media (max-width: 450px){
+@media screen and (max-width:450px) {
 
-    .contenedor-columna{
+    main{
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .producto-destacado{
+        grid-column: span 2;
         width: 100%;
         box-sizing: border-box;
         padding: 20px;
+        display: block;
+        border: 3px solid white;
     }
-
-    .texto-box{
-        width: 95%;
-        padding: 15px;
-    }
-
-    .texto-box p{
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    .texto-box h1{
-        font-size: 28px;
-    }
-
-    .input-box{
-        width: min(80%, 300px);
-    }
-
-    .solicitud-box{
-        width: min(80%, 300px);
-    }
-
-    .boton-box1{
-        width: min(80%, 150px);
-    }
-
-    .texto-box form{
-        width: 100%;
-    }
-
-    .texto-box label{
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 450px){
-
-    .producto-1{
-        width: 100%;
-        height: 150px;
-        box-sizing: border-box;
-        min-width: 0;
-    }
-
 }
