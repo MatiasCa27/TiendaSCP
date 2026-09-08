@@ -2,17 +2,19 @@
 
 /* Contenedor en columna hacia abajo */
 .contenedor-columna {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10px;
 }
 
 /* Estilo de main para la pagina home*/
-main{
+main {
     flex: 1;
+    width: 100%;
+    min-width: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -33,7 +35,7 @@ main{
 
 /* Estilo de las input boxes que se usan para escribir en ellas
 heredan el estilo de la clase box */
-.input-box{
+.input-box {
     width: clamp(12.5rem, 10.714rem + 8.929vw, 18.75rem);
     height: clamp(1rem, 0.714rem + 1.429vw, 2rem);
     text-align: center;
@@ -55,7 +57,7 @@ heredan el estilo de la clase box */
     margin: 0 0 20px 0;
 }
 
-.boton-box1{
+.boton-box1 {
     width: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
     height: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
     text-align: center;
@@ -64,7 +66,7 @@ heredan el estilo de la clase box */
 
 /* box con imagen de item destacado en el home
 hereda estilo de la clase box*/
-.producto-destacado{
+.producto-destacado {
     grid-column: span 4;
     width: 100%;
     box-sizing: border-box;
@@ -75,17 +77,20 @@ hereda estilo de la clase box*/
 
 /* Indica la informacion del producto destacado
 hereda estilo de la clase box*/
-.info-producto{
-    grid-column: span 2; /* importante el main tiene un grid de 5*/
+.info-producto {
+    grid-column: span 2;
+    /* importante el main tiene un grid de 5*/
     height: clamp(25rem, 25rem + 0vw, 25rem);
 }
 
 /* box con imagen de producto que lleva a la pagina del producto
 hereda el estilo de la clase box*/
-.producto-1{
+.producto-1 {
     grid-column: span 1;
     height: clamp(9.375rem, 9.375rem + 0vw, 9.375rem);
-    width: clamp(14.063rem, 14.063rem + 0vw, 14.063rem);
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 /* Formulario de Join Us */
@@ -128,7 +133,7 @@ hereda el estilo de la clase box*/
 
 @media screen and (max-width:450px) {
 
-    main{
+    main {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -137,7 +142,7 @@ hereda el estilo de la clase box*/
         box-sizing: border-box;
     }
 
-    .producto-destacado{
+    .producto-destacado {
         grid-column: span 2;
         width: 100%;
         box-sizing: border-box;

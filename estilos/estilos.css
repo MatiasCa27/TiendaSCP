@@ -1,7 +1,7 @@
 /* Ëstilos generales */
 
 /* Estilo general para los body */
-body{
+body {
     background-color: black;
     color: white;
     font-family: 'Courier New', Courier, monospace;
@@ -13,14 +13,14 @@ body{
 }
 
 /* color y tamaño de la fuente de los <p> */
-p{
+p {
     color: white;
     font-size: 24px;
 }
 
 /* Hace que los inputs sean de fondo transparentes y de texto en blanco
 ademas utilizan toda la box */
-input{
+input {
     color: white;
     background-color: transparent;
     width: 100%;
@@ -31,7 +31,7 @@ input{
 
 /* Hace que los botones sean de fondo transparente y texto blanco
 ademas utilizan toda la box */
-button{
+button {
     color: white;
     background-color: transparent;
     width: 100%;
@@ -44,47 +44,80 @@ button{
 }
 
 /* Estilo general del header */
-header{
+header {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 60px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
+    gap: 20px;
     border-bottom: 1px solid gray;
 }
 
 /* Estilo para la navegacion del header */
-.header-nav ul{
+.header-nav ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 75px;
+    justify-content: flex-end;
+    gap: 12px 40px;
 }
 
 /* Estilo para la navegacion del header */
-.header-nav a{
+.header-nav a {
     text-decoration: none;
     color: inherit;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-footer{
+footer {
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
-    padding: 20px;
+    padding: 12px 20px;
     border-top: 1px solid gray;
 }
 
-.footer-nav ul{
+.footer-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 75px;
+    gap: 10px 40px;
 }
 
-.footer-nav a{
+.footer-nav a {
     text-decoration: none;
-    color: gray; /* Texto sutil */
-    font-size: 20px;
+    color: gray;
+    /* Texto sutil */
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 12px;
+    }
+
+    .header-nav {
+        width: 100%;
+    }
+
+    .header-nav ul {
+        justify-content: center;
+        gap: 8px 18px;
+    }
+
+    .header-nav a,
+    .footer-nav a {
+        font-size: 12px;
+    }
 }
